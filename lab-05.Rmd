@@ -3,17 +3,12 @@ title: "Lab 05 - Nobel laureates"
 output: github_document
   
 ---
-Team Name:
+Team Name:G5
 
 Team Members - Name and Student ID
 
-1.
+1.Dana Mohammed / 2201000498
 
-2.
-
-3.
-
-4.
 
 
 
