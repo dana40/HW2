@@ -141,7 +141,7 @@ your Git pane is cleared up afterwards.d*
         in the US or not.
 
 ``` r
-nobel_living_science  <- nobel_living_science %>%
+nobel_living_science  <- nobel_living_science %>% 
     mutate(
       born_country_us = if_else(born_country == "USA", "USA", 
           "Other"))
@@ -153,7 +153,7 @@ country_us,y=born_country_us , fill=category))
 
 ``` r
   geom_bar(stat = "identity", position = "dodge", orientation =
-"horizontal")
+"horizontal") 
 ```
 
     ## geom_bar: width = NULL, na.rm = FALSE, orientation = horizontal
@@ -170,6 +170,18 @@ your Git pane is cleared up afterwards.*
     (`born_country`) and arrange the resulting data frame in descending
     order of number of observations for each country. Which country is
     the most common?
+
+``` r
+nobel_living_science %>% 
+filter(born_country_us=="Other",country_us=="USA")%>%count("born_country")%>% arrange (desc(n)) 
+```
+
+    ## # A tibble: 1 x 2
+    ##   `"born_country"`     n
+    ##   <chr>            <int>
+    ## 1 born_country       112
+
+Germany and United kingdom
 
 Knit, *commit, and push your changes to GitHub with an appropriate
 commit message. Make sure to commit and push all changed files so that
